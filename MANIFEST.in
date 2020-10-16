@@ -1,0 +1,5 @@
+recursive-include qtscp/ *.py
+recursive-include qtscp/main/ *.py
+recursive-include qtscp/aboutapp/ *.py
+recursive-include qtscp/aboutscp/ *.py
+recursive-include qtscp/aboutqt/ *.py

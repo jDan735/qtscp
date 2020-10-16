@@ -38,7 +38,7 @@ class Ui_Dialog(object):
         self.widget.setStyleSheet("background:#bbb")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(0, 10, 71, 71))
+        self.label.setGeometry(QtCore.QRect(5, 10, 71, 71))
         self.label.setStyleSheet("")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Dialog)
@@ -67,7 +67,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "About app"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img width=71 height=71 src=\":/default/img/SCP_Foundation_(emblem).svg.png\"/></p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/scp.png\"/></p></body></html>"))
         self.label_2.setText(_translate("Dialog", "<html><head/><body><p>SCP Foundation</p></body></html>"))
         self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

@@ -63,7 +63,7 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
                     del(text[number])
 
             for number, string in enumerate(text):
-                test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:"]
+                test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:", "Особые условия содержания:"]
                 for k in test:
                     if string.find(k) != -1:
                         o = string.split(":")[0]
