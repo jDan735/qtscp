@@ -63,27 +63,11 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
                     del(text[number])
 
             for number, string in enumerate(text):
-                if string.startswith("Дополнение"):
-                    del(text[number])
-
-                if string.find("Особые условия содержания:") != -1:
-                    del(text[number])
-
-            for number, string in enumerate(text):
                 test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:"]
                 for k in test:
                     if string.find(k) != -1:
                         o = string.split(":")[0]
                         text[number] = text[number].replace(o, "<b>" + o + "</b>")
-
-                if "Описание:" in string:
-                    u = number + 1
-                else:
-                    u = 6
-
-            for number, string in enumerate(text):
-                if string.startswith("Дополнение"):
-                    del(text[number])
 
             if text[0] == "":
                 del(text[0])
@@ -98,7 +82,7 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
             text = "\n".join(text)
 
         title = fixHTML(p.title.replace('\n', ''))
-        msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{text}"
+        msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n<span style='font-size:11pt'>{text}</span>"
         msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
         # print(msg)
         # for a in dir(self.textBrowser):
