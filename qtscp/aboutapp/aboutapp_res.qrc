@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="default">
+    <file>img/app/cut.hvif</file>
+    <file>img/app/qt</file>
+  </qresource>
+</RCC>

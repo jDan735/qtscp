@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="default">
+    <file>img/SCP_Foundation_(emblem).svg.png</file>
+  </qresource>
+</RCC>
