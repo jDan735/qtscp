@@ -4,6 +4,8 @@ from main import qtscp_design
 from aboutqt import aboutqt
 from aboutapp import aboutapp
 from aboutscp import aboutscp
+from __init__ import __version__, __qt_version__
+from PyQt5 import QtCore
 import pyscp
 import re
 
@@ -95,6 +97,7 @@ class AboutQt(QtWidgets.QDialog, aboutqt.Ui_Dialog):
         super(AboutQt, self).__init__()
         self.setupUi(self)
 
+        self.label_3.setText(f"Version {__qt_version__}")
         self.pushButton.clicked.connect(self.close)
 
 
@@ -103,6 +106,7 @@ class AboutApp(QtWidgets.QDialog, aboutapp.Ui_Dialog):
         super(AboutApp, self).__init__()
         self.setupUi(self)
 
+        self.label_3.setText(f"Version {__version__}")
         self.pushButton.clicked.connect(self.close)
 
 
@@ -110,7 +114,6 @@ class AboutSCP(QtWidgets.QDialog, aboutscp.Ui_Dialog):
     def __init__(self):
         super(AboutSCP, self).__init__()
         self.setupUi(self)
-
         self.pushButton.clicked.connect(self.close)
 
 
