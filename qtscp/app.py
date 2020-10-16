@@ -4,8 +4,8 @@ from main import qtscp_design
 from aboutqt import aboutqt
 from aboutapp import aboutapp
 from aboutscp import aboutscp
-from __init__ import __version__, __qt_version__
-from PyQt5 import QtCore
+from __init__ import __version__
+import pkg_resources
 import pyscp
 import re
 
@@ -97,7 +97,12 @@ class AboutQt(QtWidgets.QDialog, aboutqt.Ui_Dialog):
         super(AboutQt, self).__init__()
         self.setupUi(self)
 
-        self.label_3.setText(f"Version {__qt_version__}")
+        try:
+            qt_version = pkg_resources.get_distribution("PyQt5").version
+        except:
+            qt_version = "5"
+
+        self.label_3.setText(f"Version {qt_version}")
         self.pushButton.clicked.connect(self.close)
 
 
