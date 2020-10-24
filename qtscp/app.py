@@ -1,4 +1,3 @@
-import sys
 from PyQt5 import QtWidgets
 from main import qtscp_design
 from aboutqt import aboutqt
@@ -6,8 +5,15 @@ from aboutapp import aboutapp
 from aboutscp import aboutscp
 from __init__ import __version__
 import pkg_resources
+import requests
 import pyscp
+import sys
 import re
+import os
+
+
+s = "\\" if os.name == "nt" else "/"
+path = os.path.dirname(os.path.abspath(__file__))
 
 
 scp = pyscp.wikidot.Wiki('http://scpfoundation.net')
@@ -65,7 +71,7 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
                     del(text[number])
 
             for number, string in enumerate(text):
-                test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:", "Особые условия содержания:"]
+                test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:", "Особые условия содержания:", "Примечание:"]
                 for k in test:
                     if string.find(k) != -1:
                         o = string.split(":")[0]
@@ -83,8 +89,22 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
             print(e)
             text = "\n".join(text)
 
+        if len(p.images) != 0:
+            image = p.images[0]
+
+            r = requests.get(image)
+            ext = image.split(".")[-1]
+
+            with open(f"cache{s}image.{ext}", "wb") as img:
+                img.write(r.content)
+
+            image_html = f"<img src='cache{s}image.{ext}' width='420'>\n\n"
+        else:
+            image_html = ""
+
         title = fixHTML(p.title.replace('\n', ''))
-        msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n<span style='font-size:11pt'>{text}</span>"
+
+        msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span>"
         msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
         # print(msg)
         # for a in dir(self.textBrowser):

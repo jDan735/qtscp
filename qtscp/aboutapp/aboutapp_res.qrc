@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="default">
-    <file>img/app/picture (13).png</file>
+    <file>img/app/App_OpenCubicPlayer.png</file>
     <file>img/app/173_Transparent.webp</file>
   </qresource>
 </RCC>

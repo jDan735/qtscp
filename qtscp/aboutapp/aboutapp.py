@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.WindowModal)
-        Dialog.resize(376, 298)
+        Dialog.resize(252, 152)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -34,54 +34,54 @@ class Ui_Dialog(object):
         Dialog.setSizeGripEnabled(False)
         Dialog.setModal(True)
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(69, 17, 91, 31))
+        self.label_2.setGeometry(QtCore.QRect(70, -2, 101, 51))
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(False)
         font.setWeight(50)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        self.textBrowser = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser.setGeometry(QtCore.QRect(72, 80, 291, 161))
-        self.textBrowser.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.textBrowser.setAcceptDrops(False)
-        self.textBrowser.setObjectName("textBrowser")
         self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(272, 252, 91, 31))
+        self.pushButton.setGeometry(QtCore.QRect(180, 120, 61, 21))
         self.pushButton.setStyleSheet("")
         self.pushButton.setAutoDefault(False)
         self.pushButton.setDefault(False)
         self.pushButton.setFlat(False)
         self.pushButton.setObjectName("pushButton")
         self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(71, 50, 121, 17))
+        self.label_3.setGeometry(QtCore.QRect(70, 41, 131, 21))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("color:gray")
+        self.label_3.setStyleSheet("color:#444")
         self.label_3.setObjectName("label_3")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(0, 10, 61, 141))
+        self.label.setGeometry(QtCore.QRect(0, 10, 61, 61))
         self.label.setObjectName("label")
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setGeometry(QtCore.QRect(70, 73, 171, 31))
+        self.label_4.setWordWrap(True)
+        self.label_4.setObjectName("label_4")
+        self.widget = QtWidgets.QWidget(Dialog)
+        self.widget.setGeometry(QtCore.QRect(0, 0, 31, 151))
+        self.widget.setStyleSheet("background:#bbb")
+        self.widget.setObjectName("widget")
+        self.widget.raise_()
+        self.label_2.raise_()
+        self.pushButton.raise_()
+        self.label_3.raise_()
+        self.label.raise_()
+        self.label_4.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "About app"))
-        self.label_2.setText(_translate("Dialog", "<html><head/><body><p><span style=\"color: #41cd52;\">Qt</span>SCP</p></body></html>"))
-        self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\">Unoffical Qt client of SCP</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#000000;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\"><br /></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\">Writed by @jDan735</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\">Used pyscp module</span></p></body></html>"))
+        Dialog.setWindowTitle(_translate("Dialog", "About QtSCP"))
+        self.label_2.setText(_translate("Dialog", "<html><head/><body><p style=\"font-weight: 500;\"><span style=\" font-size:24pt; color:#41cd52;\">Qt</span><span style=\" font-size:24pt;\">SCP</span></p></body></html>"))
         self.pushButton.setText(_translate("Dialog", "OK"))
-        self.label_3.setText(_translate("Dialog", "Version 0.0.0"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img width=70 src=\":/default/img/app/picture (13).png\"/></p></body></html>"))
+        self.label_3.setText(_translate("Dialog", "<html><head/><body><p>Version 0.0.0</p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/App_OpenCubicPlayer.png\"/></p></body></html>"))
+        self.label_4.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\">Unoffical Qt client of SCP </span><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Copyright (C) 2020</span><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\"> @jDan735</span></p></body></html>"))
 from . import aboutapp_res_rc
