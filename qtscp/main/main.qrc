@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="app">
+    <file>img/app/Action_Stop_1.png</file>
+    <file>img/app/App_Magnify.png</file>
+    <file>img/app/App_OpenCubicPlayer.png</file>
+    <file>img/app/qt</file>
+    <file>img/app/scp.png</file>
+  </qresource>
+</RCC>

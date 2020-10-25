@@ -67,16 +67,28 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
 
         images = p.images
 
+        test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:", "Особые условия содержания:", r"^Приложение \d{,1}:", r"^Доктор .{,10}:", r"^Д-р .{,10}:", r"^█{,10}:", "Приложение:", "Опрашивающий:", "Опрашиваемый:", "Вступительное слово:", "<Начало записи>", "<Конец записи>", "Рекомендации:", "Выдержка из разбора операции с персоналом:", r"^Приложение .{,10}:", r"^Документ .{,10}:", "ПРЕДУПРЕЖДЕНИЕ:", "ОБЩЕЕ УВЕДОМЛЕНИЕ 001-Альфа:", "КОДОВОЕ ИМЯ:"]
+
         try:
             for number, string in enumerate(text):
                 if string.find("рейтинг:") != -1:
                     del(text[number])
 
             for number, string in enumerate(text):
-                test = ["Объект №:", "Класс объекта:", "Примеры объектов:", "Описание:", "Особые условия содержания:", "Примечание:"]
                 for k in test:
-                    if string.find(k) != -1:
+                    try:
+                        s = re.search(k, string)
+                    except:
+                        s = False
+
+                    if s:
                         o = string.split(":")[0]
+                        text[number] = text[number].replace(o, "<b>" + o + "</b>")
+
+                    elif "&lt;" in string and "&gt;" in string:
+                        text[number] = text[number].replace(fixHTML(k), "<b>" + fixHTML(k) + "</b>")
+
+                    elif string.find(k) != -1:
                         text[number] = text[number].replace(o, "<b>" + o + "</b>")
 
             if text[0] == "":
@@ -113,7 +125,7 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
         title = fixHTML(p.title.replace('\n', ''))
 
         msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span>"
-        msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
+        # msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
         # print(msg)
         # for a in dir(self.textBrowser):
         #     print(a)
