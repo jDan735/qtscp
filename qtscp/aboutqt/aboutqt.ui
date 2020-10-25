@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>549</width>
-    <height>501</height>
+    <width>540</width>
+    <height>470</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,14 +21,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>100</width>
-    <height>100</height>
+    <width>540</width>
+    <height>470</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
-    <height>1000</height>
+    <width>540</width>
+    <height>470</height>
    </size>
   </property>
   <property name="baseSize">
@@ -93,7 +93,7 @@
     <rect>
      <x>80</x>
      <y>10</y>
-     <width>91</width>
+     <width>371</width>
      <height>41</height>
     </rect>
    </property>
@@ -105,16 +105,16 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;p style=&quot;font-weight: 500;&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#41cd52;&quot;&gt;Qt&lt;/span&gt;&lt;/p&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:496;&quot;&gt;&lt;span style=&quot;color: #41cd52;&quot;&gt;Qt&lt;/span&gt; 5.15.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>460</y>
-     <width>71</width>
-     <height>21</height>
+     <y>430</y>
+     <width>81</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -130,34 +130,13 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>50</y>
-     <width>121</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:#555</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Version 5.15.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>80</y>
+     <y>60</y>
      <width>451</width>
-     <height>351</height>
+     <height>371</height>
     </rect>
    </property>
    <property name="text">

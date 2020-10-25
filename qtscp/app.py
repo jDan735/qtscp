@@ -4,6 +4,8 @@ from aboutqt import aboutqt
 from aboutapp import aboutapp
 from aboutscp import aboutscp
 from __init__ import __version__
+from PIL import Image
+
 import pkg_resources
 import requests
 import pyscp
@@ -98,7 +100,13 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
             with open(f"cache{s}image.{ext}", "wb") as img:
                 img.write(r.content)
 
-            image_html = f"<img src='cache{s}image.{ext}' width='420'>\n\n"
+            im = Image.open(f"cache{s}image.{ext}")
+            (w, h) = im.size
+
+            if w > 420:
+                w = 420
+
+            image_html = f"<img src='cache{s}image.{ext}' width='{w}'>\n\n"
         else:
             image_html = ""
 
@@ -122,7 +130,7 @@ class AboutQt(QtWidgets.QDialog, aboutqt.Ui_Dialog):
         except:
             qt_version = "5"
 
-        self.label_3.setText(f"Version {qt_version}")
+        self.label_2.setText(f'<span style="font-size:24pt; font-weight:400;"><span style="color:#41cd52;">Qt</span> {qt_version}')
         self.pushButton.clicked.connect(self.close)
 
 
@@ -131,7 +139,7 @@ class AboutApp(QtWidgets.QDialog, aboutapp.Ui_Dialog):
         super(AboutApp, self).__init__()
         self.setupUi(self)
 
-        self.label_3.setText(f"Version {__version__}")
+        self.label_2.setText(f'<span style="font-size:24pt; font-weight:496;"><span style="color:#41cd52">Qt</span>SCP</span> <span style="font-size:18pt; font-weight:400;">{__version__}</span>')
         self.pushButton.clicked.connect(self.close)
 
 
