@@ -127,11 +127,11 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
             if w > 420:
                 w = 420
 
-            image_html = f"<img style='margin: 0 auto;' src='cache{s}image.{ext}' width='{w}'>\n\n"
+            image_html = f"<p style='text-align: center;'><img src='cache{s}image.{ext}' width='{w}'></p>\n\n"
         else:
             image_html = ""
 
-        title = fixHTML(p.title.replace('\n', ''))
+        title = fixHTML(p.title.replace('/n/n', '').replace('\n', ''))
 
         msg = f"<div style='margin: 10;'><span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span></div>"
         # msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
