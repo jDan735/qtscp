@@ -27,6 +27,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setGeometry(QtCore.QRect(0, 40, 481, 581))
         self.textBrowser.setAcceptDrops(True)
         self.textBrowser.setAutoFillBackground(False)
+        self.textBrowser.setStyleSheet("")
         self.textBrowser.setOverwriteMode(False)
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setObjectName("textBrowser")
@@ -47,12 +48,12 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
         self.actionAbout_SCP = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/app/img/app/scp.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/app/aboutscp/img/app/Alert_Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionAbout_SCP.setIcon(icon)
         self.actionAbout_SCP.setObjectName("actionAbout_SCP")
         self.actionAbout_Qt = QtWidgets.QAction(MainWindow)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/app/img/app/qt"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/app/images/Qt.iom"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionAbout_Qt.setIcon(icon1)
         self.actionAbout_Qt.setObjectName("actionAbout_Qt")
         self.actionAbout_QtSCP = QtWidgets.QAction(MainWindow)
@@ -86,7 +87,7 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>"))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
         self.menuView.setTitle(_translate("MainWindow", "View"))

@@ -15,19 +15,19 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.WindowModal)
-        Dialog.resize(580, 609)
+        Dialog.resize(590, 610)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Dialog.sizePolicy().hasHeightForWidth())
         Dialog.setSizePolicy(sizePolicy)
-        Dialog.setMinimumSize(QtCore.QSize(100, 100))
-        Dialog.setMaximumSize(QtCore.QSize(1000, 1000))
+        Dialog.setMinimumSize(QtCore.QSize(590, 610))
+        Dialog.setMaximumSize(QtCore.QSize(590, 610))
         Dialog.setBaseSize(QtCore.QSize(337, 291))
         Dialog.setFocusPolicy(QtCore.Qt.ClickFocus)
         Dialog.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/default/img/app/qt"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/default/img/app/Alert_Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         Dialog.setAutoFillBackground(False)
         Dialog.setStyleSheet("")
@@ -35,14 +35,14 @@ class Ui_Dialog(object):
         Dialog.setModal(True)
         self.widget = QtWidgets.QWidget(Dialog)
         self.widget.setGeometry(QtCore.QRect(0, 0, 31, 611))
-        self.widget.setStyleSheet("background:#bbb")
+        self.widget.setStyleSheet("background:#B8B8B8")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(5, 10, 71, 71))
+        self.label.setGeometry(QtCore.QRect(10, 10, 71, 71))
         self.label.setStyleSheet("")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(80, 16, 211, 31))
+        self.label_2.setGeometry(QtCore.QRect(90, 10, 471, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(False)
@@ -50,16 +50,20 @@ class Ui_Dialog(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.textBrowser = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 60, 491, 501))
+        self.textBrowser.setGeometry(QtCore.QRect(90, 60, 491, 501))
         self.textBrowser.setFocusPolicy(QtCore.Qt.NoFocus)
         self.textBrowser.setAcceptDrops(False)
+        self.textBrowser.setStyleSheet("")
         self.textBrowser.setObjectName("textBrowser")
         self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(480, 570, 91, 31))
+        self.pushButton.setGeometry(QtCore.QRect(490, 570, 91, 31))
         self.pushButton.setAutoDefault(False)
         self.pushButton.setDefault(False)
         self.pushButton.setFlat(False)
         self.pushButton.setObjectName("pushButton")
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setGeometry(QtCore.QRect(10, 50, 31, 31))
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -67,30 +71,31 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "About SCP Foundation"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/scp.png\"/></p></body></html>"))
-        self.label_2.setText(_translate("Dialog", "<html><head/><body><p style=\"font-weight: 500;\">SCP Foundation</p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/App_OpenCubicPlayer.png\"/></p></body></html>"))
+        self.label_2.setText(_translate("Dialog", "<html><head/><body><p style=\" font-size:24pt; font-weight:496;\">SCP Foundation</p></body></html>"))
         self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc0\"></a><span style=\" font-size:18pt; font-weight:600;\">О</span><span style=\" font-size:18pt; font-weight:600;\">писание цели</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Невидимый и вездесущий, Фонд SCP находится вне пределов чьей-либо юрисдикции. Он наделён соответствующими полномочиями всех основных мировых правительств и имеет задачу сдерживания объектов и явлений, которые ставят под угрозу естественность и нормальность этого мира. Подобные аномалии представляют собой значительную угрозу для глобальной безопасности и могут нести как физическую, так и психологическую опасность.</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд действует, чтобы нормы так и оставались нормами, чтобы население Земли могло и дальше жить обычной жизнью, не боясь и не подвергая сомнению своё восприятие окружающего мира, чтобы человечество было защищено от различных внеземных угроз, а также угроз из других измерений и вселенных.</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Наша миссия строится на трёх основных постулатах:</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc1\"></a><span style=\" font-size:14pt; font-weight:600;\">О</span><span style=\" font-size:14pt; font-weight:600;\">безопасить</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд захватывает аномалии, не допуская их попадания в руки гражданских лиц (тем самым обеспечивая их безопасность) или враждебных организаций (тем самым обеспечивая безопасность </span><span style=\" font-size:8pt; font-style:italic;\">от</span><span style=\" font-size:8pt;\"> них). Это достигается путём ведения глобальной слежки и быстрого реагирования на любое проявления аномальной активности.</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc2\"></a><span style=\" font-size:14pt; font-weight:600;\">У</span><span style=\" font-size:14pt; font-weight:600;\">держать</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд содержит аномалии, чтобы не допускать распространения их влияния. Это достигается путём их перемещения, маскировки или демонтажа, а также подавлением или недопущением распространения информации об аномалиях среди широкой общественности.</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc3\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">охранить</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд защищает человечество от аномальных эффектов, а также сохраняет сами аномалии, пока они не будут полностью поняты или же на их основе не будут разработаны новые научные теории. Фонд также может нейтрализовывать или уничтожать аномалии, но подобные действия применяются лишь в самых крайних случаях, когда аномалия слишком опасна, чтобы её можно было содержать.</span></p>\n"
-"<p style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc4\"></a><span style=\" font-size:16pt; font-weight:600;\">О</span><span style=\" font-size:16pt; font-weight:600;\">перации Фонда</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">С целью выполнения основных задач Фонд регулярно проводит множество тайных операций по всему миру.</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc5\"></a><span style=\" font-size:14pt; font-weight:600;\">О</span><span style=\" font-size:14pt; font-weight:600;\">собые условия содержания или Special Containment Procedures - &quot;SCP&quot;</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд обладает обширной базой данных об аномалиях, требующих особых условий содержания, что обычно сокращается как &quot;ОУС&quot;. Большая часть этой информации содержит общие сведения об аномальных объектах и описания процедур, требуемых для их безопасного содержания или выполняемых в случае нарушений условий содержания и других подобных событий.</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Аномалии имеют множество форм, среди них встречаются предметы, существа, места и даже явления. При постановке на содержание каждой такой аномалии присваивается один из </span><a href=\"http://scpfoundation.net/object-classes\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">классов</span></a><span style=\" font-size:8pt;\">, после чего она или транспортируется в одно из множества </span><a href=\"http://scpfoundation.net/secure-facilities-locations\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">учреждений Фонда</span></a><span style=\" font-size:8pt;\">, или же, если её перемещение невозможно, содержится на месте обнаружения.</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc6\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">екретность</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд действует в режиме строжайшей секретности. Каждый из его сотрудников обладает одним из </span><a href=\"http://scpfoundation.net/security-clearance-levels\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">уровней допуска</span></a><span style=\" font-size:8pt;\">, который позволяет ему получать доступ только к необходимой для выполнения его обязанностей информации. Персонал Фонда, уличённый в нарушении протоколов секретности, идентифицируется, задерживается и подвергается дисциплинарным мерам, зависящим от серьёзности нарушения.</span></p>\n"
-"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc7\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">вязанные организации и враждебные группировки</span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд SCP - не единственная организация, которой известно об аномалиях, многие другие группировки пытаются взаимодействовать с аномальными объектами или как-то их использовать. Некоторые такие </span><a href=\"http://scpfoundation.net/groups-of-interest\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">связанные организации</span></a><span style=\" font-size:8pt;\"> имеют схожие с Фондом цели и могут сотрудничать с ним, но большая часть действует в собственных интересах и чаще всего пытается приспособить аномалии для получения прибыли. От персонала Фонда требуется проявлять осторожность при взаимодействии с членами подобных группировок, сотрудничество с ними без предварительного согласования с руководством может послужить причиной применения дисциплинарных мер, вплоть до устранения.</span></p></body></html>"))
+"<p style=\" margin-top:18px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc0\"></a><span style=\" font-size:18pt; font-weight:600;\">О</span><span style=\" font-size:18pt; font-weight:600;\">писание цели</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Невидимый и вездесущий, Фонд SCP находится вне пределов чьей-либо юрисдикции. Он наделён соответствующими полномочиями всех основных мировых правительств и имеет задачу сдерживания объектов и явлений, которые ставят под угрозу естественность и нормальность этого мира. Подобные аномалии представляют собой значительную угрозу для глобальной безопасности и могут нести как физическую, так и психологическую опасность.</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд действует, чтобы нормы так и оставались нормами, чтобы население Земли могло и дальше жить обычной жизнью, не боясь и не подвергая сомнению своё восприятие окружающего мира, чтобы человечество было защищено от различных внеземных угроз, а также угроз из других измерений и вселенных.</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Наша миссия строится на трёх основных постулатах:</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc1\"></a><span style=\" font-size:14pt; font-weight:600;\">О</span><span style=\" font-size:14pt; font-weight:600;\">безопасить</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд захватывает аномалии, не допуская их попадания в руки гражданских лиц (тем самым обеспечивая их безопасность) или враждебных организаций (тем самым обеспечивая безопасность </span><span style=\" font-size:8pt; font-style:italic;\">от</span><span style=\" font-size:8pt;\"> них). Это достигается путём ведения глобальной слежки и быстрого реагирования на любое проявления аномальной активности.</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc2\"></a><span style=\" font-size:14pt; font-weight:600;\">У</span><span style=\" font-size:14pt; font-weight:600;\">держать</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд содержит аномалии, чтобы не допускать распространения их влияния. Это достигается путём их перемещения, маскировки или демонтажа, а также подавлением или недопущением распространения информации об аномалиях среди широкой общественности.</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc3\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">охранить</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд защищает человечество от аномальных эффектов, а также сохраняет сами аномалии, пока они не будут полностью поняты или же на их основе не будут разработаны новые научные теории. Фонд также может нейтрализовывать или уничтожать аномалии, но подобные действия применяются лишь в самых крайних случаях, когда аномалия слишком опасна, чтобы её можно было содержать.</span></p>\n"
+"<p style=\" margin-top:18px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc4\"></a><span style=\" font-size:16pt; font-weight:600;\">О</span><span style=\" font-size:16pt; font-weight:600;\">перации Фонда</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">С целью выполнения основных задач Фонд регулярно проводит множество тайных операций по всему миру.</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc5\"></a><span style=\" font-size:14pt; font-weight:600;\">О</span><span style=\" font-size:14pt; font-weight:600;\">собые условия содержания или Special Containment Procedures - &quot;SCP&quot;</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд обладает обширной базой данных об аномалиях, требующих особых условий содержания, что обычно сокращается как &quot;ОУС&quot;. Большая часть этой информации содержит общие сведения об аномальных объектах и описания процедур, требуемых для их безопасного содержания или выполняемых в случае нарушений условий содержания и других подобных событий.</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Аномалии имеют множество форм, среди них встречаются предметы, существа, места и даже явления. При постановке на содержание каждой такой аномалии присваивается один из </span><a href=\"http://scpfoundation.net/object-classes\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">классов</span></a><span style=\" font-size:8pt;\">, после чего она или транспортируется в одно из множества </span><a href=\"http://scpfoundation.net/secure-facilities-locations\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">учреждений Фонда</span></a><span style=\" font-size:8pt;\">, или же, если её перемещение невозможно, содержится на месте обнаружения.</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc6\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">екретность</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд действует в режиме строжайшей секретности. Каждый из его сотрудников обладает одним из </span><a href=\"http://scpfoundation.net/security-clearance-levels\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">уровней допуска</span></a><span style=\" font-size:8pt;\">, который позволяет ему получать доступ только к необходимой для выполнения его обязанностей информации. Персонал Фонда, уличённый в нарушении протоколов секретности, идентифицируется, задерживается и подвергается дисциплинарным мерам, зависящим от серьёзности нарушения.</span></p>\n"
+"<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc7\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">вязанные организации и враждебные группировки</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд SCP - не единственная организация, которой известно об аномалиях, многие другие группировки пытаются взаимодействовать с аномальными объектами или как-то их использовать. Некоторые такие </span><a href=\"http://scpfoundation.net/groups-of-interest\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">связанные организации</span></a><span style=\" font-size:8pt;\"> имеют схожие с Фондом цели и могут сотрудничать с ним, но большая часть действует в собственных интересах и чаще всего пытается приспособить аномалии для получения прибыли. От персонала Фонда требуется проявлять осторожность при взаимодействии с членами подобных группировок, сотрудничество с ними без предварительного согласования с руководством может послужить причиной применения дисциплинарных мер, вплоть до устранения.</span></p></body></html>"))
         self.pushButton.setText(_translate("Dialog", "OK"))
+        self.label_3.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/Alert_Info.png\"/></p></body></html>"))
 from . import aboutscp_res_rc

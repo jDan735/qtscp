@@ -35,6 +35,8 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
         self.actionAbout_QtSCP.triggered.connect(self.about_app)
         self.actionAbout_SCP.triggered.connect(self.about_scp)
 
+        self.textBrowser.installEventFilter(self)
+
     def about_qt(self):
         modal = AboutQt()
         modal.exec_()
@@ -46,6 +48,13 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
     def about_scp(self):
         modal = AboutSCP()
         modal.exec_()
+
+    def resizeEvent(self, event):
+        s = self.size()
+        btns = self.pushButton.width()
+        self.lineEdit.resize(s.width() - btns - 30, self.lineEdit.height())
+        self.pushButton.move(s.width() - btns - 10, 10)
+        self.textBrowser.resize(s.width(), s.height() - 60)
 
     def getSCP(self, query):
 
@@ -118,13 +127,13 @@ class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
             if w > 420:
                 w = 420
 
-            image_html = f"<img src='cache{s}image.{ext}' width='{w}'>\n\n"
+            image_html = f"<img style='margin: 0 auto;' src='cache{s}image.{ext}' width='{w}'>\n\n"
         else:
             image_html = ""
 
         title = fixHTML(p.title.replace('\n', ''))
 
-        msg = f"<span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span>"
+        msg = f"<div style='margin: 10;'><span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span></div>"
         # msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
         # print(msg)
         # for a in dir(self.textBrowser):

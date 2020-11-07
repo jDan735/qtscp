@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="default">
-    <file>img/SCP_Foundation_(emblem).svg.png</file>
-    <file>img/scp.png</file>
+    <file>img/app/Alert_Info.png</file>
+    <file>img/app/App_OpenCubicPlayer.png</file>
   </qresource>
 </RCC>

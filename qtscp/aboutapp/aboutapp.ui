@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>292</width>
-    <height>150</height>
+    <height>130</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,13 +25,13 @@
   <property name="minimumSize">
    <size>
     <width>292</width>
-    <height>150</height>
+    <height>130</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>292</width>
-    <height>150</height>
+    <height>130</height>
    </size>
   </property>
   <property name="baseSize">
@@ -71,10 +71,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>80</x>
      <y>0</y>
      <width>231</width>
-     <height>61</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -92,7 +92,7 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>110</y>
+     <y>90</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -116,7 +116,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>10</y>
      <width>61</width>
      <height>61</height>
@@ -129,10 +129,10 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>53</y>
+     <x>80</x>
+     <y>50</y>
      <width>171</width>
-     <height>51</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -152,7 +152,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background:#bbb</string>
+    <string notr="true">background:#B8B8B8</string>
    </property>
   </widget>
   <zorder>widget</zorder>

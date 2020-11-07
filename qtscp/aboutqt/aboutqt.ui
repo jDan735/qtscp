@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>540</width>
-    <height>470</height>
+    <width>550</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,14 +21,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>540</width>
-    <height>470</height>
+    <width>550</width>
+    <height>460</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>540</width>
-    <height>470</height>
+    <width>550</width>
+    <height>460</height>
    </size>
   </property>
   <property name="baseSize">
@@ -47,8 +47,8 @@
    <string>AboutQt</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="aboutqt_res.qrc">
-    <normaloff>:/default/img/app/qt</normaloff>:/default/img/app/qt</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/appicons/images/Qt.iom</normaloff>:/appicons/images/Qt.iom</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -68,11 +68,11 @@
      <x>0</x>
      <y>0</y>
      <width>31</width>
-     <height>501</height>
+     <height>471</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background:#bbb</string>
+    <string notr="true">background:#B8B8B8</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -85,7 +85,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/default/img/app/qt&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/appicons/images/Qt.iom&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -111,8 +111,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>430</y>
+     <x>460</x>
+     <y>420</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -134,7 +134,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>60</y>
+     <y>50</y>
      <width>451</width>
      <height>371</height>
     </rect>
@@ -148,7 +148,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="aboutqt_res.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
