@@ -27,7 +27,7 @@ class Ui_Dialog(object):
         Dialog.setFocusPolicy(QtCore.Qt.ClickFocus)
         Dialog.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/appicons/images/Qt.iom"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/app/img/Qt.iom"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         Dialog.setAutoFillBackground(False)
         Dialog.setStyleSheet("")
@@ -65,8 +65,8 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "AboutQt"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/appicons/images/Qt.iom\"/></p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/app/img/Qt.iom\"/></p></body></html>"))
         self.label_2.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:24pt; font-weight:496;\"><span style=\"color: #41cd52;\">Qt</span> 5.15.0</span></p></body></html>"))
         self.pushButton.setText(_translate("Dialog", "OK"))
         self.label_4.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt is a C++ toolkit for cross-platform application development.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt is available under multiple licensing options designed to accommodate the needs of our various users.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of GNU (L)GPL.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt licensed under GNU (L)GPL is appropriate for the development of Qt applications provided you can comply with the terms and conditions of the respective licenses.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Please see </span><a href=\"http://qt.io/licensing/\"><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; text-decoration: underline; color:#3366bb;\">qt.io/licensing</span></a><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\"> for an overview of Qt licensing.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Copyright (C) 2020 The Qt Company Ltd and other contributors.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt and the Qt logo are trademarks of The Qt Company Ltd.</span></p><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Qt is The Qt Company Ltd product developed as an open source project. See </span><a href=\"http://qt.io/\"><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; text-decoration: underline; color:#3366bb;\">qt.io</span></a><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\"> for more information.</span></p></body></html>"))
-from . import images_rc
+import images_rc

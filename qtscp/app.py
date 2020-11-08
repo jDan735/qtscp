@@ -1,10 +1,13 @@
+# -- coding: utf8 --
+
 from PyQt5 import QtWidgets
-from main import qtscp_design
-from aboutqt import aboutqt
-from aboutapp import aboutapp
-from aboutscp import aboutscp
 from __init__ import __version__
 from PIL import Image
+
+import qtscp
+import aboutqt
+import aboutapp
+import aboutscp
 
 import pkg_resources
 import requests
@@ -25,7 +28,7 @@ def fixHTML(code):
     return code.replace("<", "&lt;").replace(">", "&gt;")
 
 
-class QtSCP(QtWidgets.QMainWindow, qtscp_design.Ui_MainWindow):
+class QtSCP(QtWidgets.QMainWindow, qtscp.Ui_MainWindow):
     def __init__(self):
         super(QtSCP, self).__init__()
         self.setupUi(self)

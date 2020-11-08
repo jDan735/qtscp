@@ -27,7 +27,7 @@ class Ui_Dialog(object):
         Dialog.setFocusPolicy(QtCore.Qt.ClickFocus)
         Dialog.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/default/img/app/Alert_Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/app/img/Alert_Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         Dialog.setAutoFillBackground(False)
         Dialog.setStyleSheet("")
@@ -71,7 +71,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "About SCP Foundation"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/App_OpenCubicPlayer.png\"/></p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/app/img/App_OpenCubicPlayer.png\"/></p></body></html>"))
         self.label_2.setText(_translate("Dialog", "<html><head/><body><p style=\" font-size:24pt; font-weight:496;\">SCP Foundation</p></body></html>"))
         self.textBrowser.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -97,5 +97,5 @@ class Ui_Dialog(object):
 "<p style=\" margin-top:16px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><a name=\"toc7\"></a><span style=\" font-size:14pt; font-weight:600;\">С</span><span style=\" font-size:14pt; font-weight:600;\">вязанные организации и враждебные группировки</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:10px; margin-right:10px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Фонд SCP - не единственная организация, которой известно об аномалиях, многие другие группировки пытаются взаимодействовать с аномальными объектами или как-то их использовать. Некоторые такие </span><a href=\"http://scpfoundation.net/groups-of-interest\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">связанные организации</span></a><span style=\" font-size:8pt;\"> имеют схожие с Фондом цели и могут сотрудничать с ним, но большая часть действует в собственных интересах и чаще всего пытается приспособить аномалии для получения прибыли. От персонала Фонда требуется проявлять осторожность при взаимодействии с членами подобных группировок, сотрудничество с ними без предварительного согласования с руководством может послужить причиной применения дисциплинарных мер, вплоть до устранения.</span></p></body></html>"))
         self.pushButton.setText(_translate("Dialog", "OK"))
-        self.label_3.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/Alert_Info.png\"/></p></body></html>"))
-from . import aboutscp_res_rc
+        self.label_3.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/app/img/Alert_Info.png\"/></p></body></html>"))
+import images_rc
