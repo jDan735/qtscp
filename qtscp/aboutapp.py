@@ -28,7 +28,7 @@ class Ui_Dialog(object):
         Dialog.setFocusPolicy(QtCore.Qt.ClickFocus)
         Dialog.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/default/img/app/App_OpenCubicPlayer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/app/img/App_OpenCubicPlayer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         Dialog.setAutoFillBackground(False)
         Dialog.setStyleSheet("")
@@ -75,6 +75,6 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "About QtSCP"))
         self.label_2.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:24pt; font-weight:496; color:#41cd52;\">Qt</span><span style=\" font-size:24pt; font-weight:496;\">SCP </span>0.0.1b3</p></body></html>"))
         self.pushButton.setText(_translate("Dialog", "OK"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/default/img/app/App_OpenCubicPlayer.png\"/></p></body></html>"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><img src=\":/app/img/App_OpenCubicPlayer.png\"/><img src=\":/default/img/app/App_OpenCubicPlayer.png\"/></p></body></html>"))
         self.label_4.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\">Unoffical Qt client of SCP </span><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt;\">Copyright (C) 2020</span><span style=\" font-family:\'Noto Sans Display\'; font-size:9pt; color:#000000;\"> @jDan735</span></p></body></html>"))
-from . import aboutapp_res_rc
+import images_rc

@@ -50,8 +50,8 @@
    <string>About QtSCP</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="aboutapp_res.qrc">
-    <normaloff>:/default/img/app/App_OpenCubicPlayer.png</normaloff>:/default/img/app/App_OpenCubicPlayer.png</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/app/img/App_OpenCubicPlayer.png</normaloff>:/app/img/App_OpenCubicPlayer.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -123,7 +123,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/default/img/app/App_OpenCubicPlayer.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/app/img/App_OpenCubicPlayer.png&quot;/&gt;&lt;img src=&quot;:/default/img/app/App_OpenCubicPlayer.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -162,7 +162,7 @@
   <zorder>label_4</zorder>
  </widget>
  <resources>
-  <include location="aboutapp_res.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

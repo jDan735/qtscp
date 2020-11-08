@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="appicons">
-    <file>images.qrc</file>
-    <file>../images/Qt.iom</file>
-  </qresource>
-</RCC>

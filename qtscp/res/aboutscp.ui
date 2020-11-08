@@ -47,8 +47,8 @@
    <string>About SCP Foundation</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="aboutscp_res.qrc">
-    <normaloff>:/default/img/app/Alert_Info.png</normaloff>:/default/img/app/Alert_Info.png</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/app/img/Alert_Info.png</normaloff>:/app/img/Alert_Info.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -88,7 +88,7 @@
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/default/img/app/App_OpenCubicPlayer.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/app/img/App_OpenCubicPlayer.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -187,12 +187,12 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/default/img/app/Alert_Info.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/app/img/Alert_Info.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
  <resources>
-  <include location="aboutscp_res.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

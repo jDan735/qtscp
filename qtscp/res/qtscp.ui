@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>QtSCP</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/app/img/App_OpenCubicPlayer.png</normaloff>:/app/img/App_OpenCubicPlayer.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
@@ -76,7 +80,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -116,8 +120,8 @@ p, li { white-space: pre-wrap; }
   </widget>
   <action name="actionAbout_SCP">
    <property name="icon">
-    <iconset resource="main.qrc">
-     <normaloff>:/app/aboutscp/img/app/Alert_Info.png</normaloff>:/app/aboutscp/img/app/Alert_Info.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/app/img/Alert_Info.png</normaloff>:/app/img/Alert_Info.png</iconset>
    </property>
    <property name="text">
     <string>About SCP</string>
@@ -125,8 +129,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAbout_Qt">
    <property name="icon">
-    <iconset resource="main.qrc">
-     <normaloff>:/app/images/Qt.iom</normaloff>:/app/images/Qt.iom</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/app/img/Qt.iom</normaloff>:/app/img/Qt.iom</iconset>
    </property>
    <property name="text">
     <string>About Qt</string>
@@ -134,8 +138,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAbout_QtSCP">
    <property name="icon">
-    <iconset resource="main.qrc">
-     <normaloff>:/app/img/app/App_OpenCubicPlayer.png</normaloff>:/app/img/app/App_OpenCubicPlayer.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/app/img/App_OpenCubicPlayer.png</normaloff>:/app/img/App_OpenCubicPlayer.png</iconset>
    </property>
    <property name="text">
     <string>About QtSCP</string>
@@ -143,8 +147,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionQuit">
    <property name="icon">
-    <iconset resource="main.qrc">
-     <normaloff>:/app/img/app/Action_Stop_1.png</normaloff>:/app/img/app/Action_Stop_1.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/app/img/Action_Stop_1.png</normaloff>:/app/img/Action_Stop_1.png</iconset>
    </property>
    <property name="text">
     <string>Quit</string>
@@ -152,7 +156,7 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <resources>
-  <include location="main.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

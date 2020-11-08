@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="default">
-    <file>img/app/Alert_Info.png</file>
-    <file>img/app/App_OpenCubicPlayer.png</file>
-  </qresource>
-</RCC>

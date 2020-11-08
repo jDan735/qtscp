@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="app">
+    <file>img/173_Transparent.webp</file>
+    <file>img/Action_Stop_1.png</file>
+    <file>img/Alert_Info.png</file>
+    <file>img/App_Magnify.png</file>
+    <file>img/App_OpenCubicPlayer.png</file>
+    <file>img/cut.hvif</file>
+    <file>img/qt</file>
+    <file>img/Qt.iom</file>
+    <file>img/scp.png</file>
+  </qresource>
+</RCC>
