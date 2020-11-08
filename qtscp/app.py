@@ -1,13 +1,11 @@
 # -- coding: utf8 --
 
-from PyQt5 import QtWidgets
-from __init__ import __version__
+from PyQt5 import QtWidgets, uic
 from PIL import Image
 
-import qtscp
-import aboutqt
-import aboutapp
-import aboutscp
+from __init__ import __version__
+
+import images_rc
 
 import pkg_resources
 import requests
@@ -28,10 +26,10 @@ def fixHTML(code):
     return code.replace("<", "&lt;").replace(">", "&gt;")
 
 
-class QtSCP(QtWidgets.QMainWindow, qtscp.Ui_MainWindow):
+class QtSCP(QtWidgets.QMainWindow):
     def __init__(self):
         super(QtSCP, self).__init__()
-        self.setupUi(self)
+        uic.loadUi("res/qtscp.ui", self)
 
         self.pushButton.clicked.connect(lambda a: self.getSCP(self.lineEdit.text()))
         self.actionAbout_Qt.triggered.connect(self.about_qt)
@@ -144,10 +142,10 @@ class QtSCP(QtWidgets.QMainWindow, qtscp.Ui_MainWindow):
         self.textBrowser.setText(msg.replace("\n", "<br/>"))
 
 
-class AboutQt(QtWidgets.QDialog, aboutqt.Ui_Dialog):
+class AboutQt(QtWidgets.QDialog):
     def __init__(self):
         super(AboutQt, self).__init__()
-        self.setupUi(self)
+        uic.loadUi("res/aboutqt.ui", self)
 
         try:
             qt_version = pkg_resources.get_distribution("PyQt5").version
@@ -158,19 +156,20 @@ class AboutQt(QtWidgets.QDialog, aboutqt.Ui_Dialog):
         self.pushButton.clicked.connect(self.close)
 
 
-class AboutApp(QtWidgets.QDialog, aboutapp.Ui_Dialog):
+class AboutApp(QtWidgets.QDialog):
     def __init__(self):
         super(AboutApp, self).__init__()
-        self.setupUi(self)
+        uic.loadUi("res/aboutapp.ui", self)
 
         self.label_2.setText(f'<span style="font-size:24pt; font-weight:496;"><span style="color:#41cd52">Qt</span>SCP</span> <span style="font-size:18pt; font-weight:400;">{__version__}</span>')
         self.pushButton.clicked.connect(self.close)
 
 
-class AboutSCP(QtWidgets.QDialog, aboutscp.Ui_Dialog):
+class AboutSCP(QtWidgets.QDialog):
     def __init__(self):
         super(AboutSCP, self).__init__()
-        self.setupUi(self)
+        uic.loadUi("res/aboutscp.ui", self)
+
         self.pushButton.clicked.connect(self.close)
 
 
