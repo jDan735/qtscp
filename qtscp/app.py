@@ -128,13 +128,13 @@ class QtSCP(QtWidgets.QMainWindow):
             if w > 420:
                 w = 420
 
-            image_html = f"<p style='text-align: center;'><img src='cache{s}image.{ext}' width='{w}'></p>\n\n"
+            image_html = f"<p style='text-align: center;'><img src='cache{s}image.{ext}' width='{w}'></p>"
         else:
-            image_html = ""
+            image_html = "<br>"
 
         title = fixHTML(p.title.replace('/n/n', '').replace('\n', ''))
 
-        msg = f"<div style='margin: 10;'><span style='font-size:20pt; font-weight:900;'>{title}</span>\n\n{image_html}<span style='font-size:11pt'>{text}</span></div>"
+        msg = f"<div><span style='font-size:20pt; font-weight:900;'>{title}</span>{image_html}<span style='font-size:11pt; margin: 10;'>{text}</span></div>"
         # msg = msg.replace("</b>\n\n<b>", "</b>\n<b>")
         # print(msg)
         # for a in dir(self.textBrowser):
