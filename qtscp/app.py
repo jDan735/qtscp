@@ -3,8 +3,6 @@
 from PyQt5 import QtWidgets, uic
 from PIL import Image
 
-from __init__ import __version__
-
 import images_rc
 
 import pkg_resources
